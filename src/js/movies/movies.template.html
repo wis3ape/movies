@@ -1,0 +1,38 @@
+<div id="movies-container">
+    <div class="filter">
+        <input type="text" class="form-control" placeholder="Filter movies..." ng-model="moviesVm.search.title">
+    </div>
+
+    <div id="sort-container">
+        <span>Showing {{filteredMovies.length}} - {{moviesVm.moviesList.length}} movies</span>
+        <label>Sort by</label>
+        <select class="form-control sort">
+            <option ng-click="order('name')">Name</option>
+            <option ng-click="order('date')">Date</option>
+        </select>
+    </div>
+
+    <ul id="movies-list" class="list-unstyled">
+        <li class="movie" ng-repeat="movie in filteredMovies = ( moviesVm.moviesList | filter:moviesVm.search )">
+            <img ng-src="{{::movie.image}}" alt="Thumb image for {{::movie.title}}" class="movie-thumb img-rounded">
+            <div class="title">
+                <span class="movie-title">{{::movie.title}}</span><span class="movie-rating">{{::movie.rating}}</span>
+                <button class="btn btn-default btn-block add-watchlist">Add to Watchlist</button>
+            </div>
+            <div class="specs">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Release Date</td>
+                            <td>{{::movie.date | momentify}}</td>
+                        </tr>
+                        <tr>
+                            <td>Run Time</td>
+                            <td>{{::movie.run_time | timeit}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </li>
+    </ul>
+</div>
