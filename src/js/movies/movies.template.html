@@ -14,7 +14,9 @@
 
     <ul id="movies-list" class="list-unstyled">
         <li class="movie" ng-repeat="movie in filteredMovies = ( moviesVm.moviesList | filter:moviesVm.search )">
-            <img ng-src="{{::movie.image}}" alt="Thumb image for {{::movie.title}}" class="movie-thumb img-rounded">
+            <div class="movie-image">
+                <img ng-src="{{::movie.image}}" alt="Thumb image for {{::movie.title}}" class="thumb img-rounded">
+            </div>
             <div class="title">
                 <span class="movie-title">{{::movie.title}}</span><span class="movie-rating">{{::movie.rating}}</span>
                 <button class="btn btn-default btn-block add-watchlist">Add to Watchlist</button>

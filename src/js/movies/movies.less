@@ -15,22 +15,27 @@
     #movies-list {
         .movie {
             height: 300px;
+            display: flex;
 
             &:hover {
                 background-color: @lightGray;
             }
 
-            .movie-thumb {
-                width: 150px;
-                height: auto;
-                display: inline-block;
-                margin: 40px 20px 0 0;
+            .movie-image {
+                flex: 1;
+                text-align: center;
+
+                .thumb {
+                    width: 150px;
+                    height: auto;
+                    display: inline-block;
+                    margin: 40px 20px 0 0;
+                }
             }
 
             .title {
-                display: inline-block;
-                vertical-align: top;
-                margin-top: 50px;
+                flex: 2;
+                padding-top: 50px;
 
                 .movie-title {
                     font-size: 2em;
@@ -53,7 +58,8 @@
             }
 
             .specs {
-                display: inline-block;
+                flex: 2;
+                padding-top: 100px;
 
                 td {
                     padding: 5px 30px;
