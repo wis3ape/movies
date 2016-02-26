@@ -1,17 +1,18 @@
 #Instructions
 
-Install node & bower dependencies:
+Please check on your system that you have installed:
+.Node & npm
+.Bower (`npm i -g bower`)
+.Grunt-cli (`npm i -g grunt-cli`)
+
+Install node & bower project dependencies:
 `npm i && bower install`
 
 To run the project for development please run:
 `grunt serve-dev`
 
-To run it for production run instead:
+To run it for production environment run instead:
 `grunt serve-prod`
-
-It's importante to notice that you might need to install grunt-cli globally:
-`npm i -g grunt-cli`
-
 
 
 #TODO
@@ -19,6 +20,7 @@ It's importante to notice that you might need to install grunt-cli globally:
 .Sorting
 .Pagination
 .Movie detail view
+
 
 #Bugs
 
