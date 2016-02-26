@@ -48,8 +48,17 @@ module.exports = function(grunt) {
 
         bower_concat: {
             all: {
-                dest: 'dist/js/app.dependencies.js',
-                cssDest: 'dist/css/app.dependencies.css'
+                dest: {
+                    js: 'dist/js/app.dependencies.js',
+                    css: 'dist/css/app.dependencies.min.css'
+                },
+                mainFiles: {
+                    bootstrap: [
+                        'dist/js/bootstrap.js',
+                        'dist/css/bootstrap.css',
+                        'less/bootstrap.less'
+                    ]
+                }
             }
         },
 
