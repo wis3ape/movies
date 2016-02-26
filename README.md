@@ -20,8 +20,3 @@ To run it for production environment run instead:
 .Sorting
 .Pagination
 .Movie detail view
-
-
-#Bugs
-
-.PROD build is missing styles
